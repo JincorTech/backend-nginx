@@ -5,7 +5,7 @@ MAINTAINER Mahmoud Zalt <mahmoud@zalt.me>
 ADD ./config/nginx.conf /etc/nginx/
 COPY ./config/sites/*.conf /etc/nginx/sites-available/
 
-ARG PHP_UPSTREAM=php-fpm
+ARG PHP_UPSTREAM=companies
 
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/' /etc/apk/repositories
 
