@@ -3,9 +3,9 @@ FROM nginx:alpine
 MAINTAINER Mahmoud Zalt <mahmoud@zalt.me>
 
 ADD ./config/nginx.conf /etc/nginx/
-COPY ./config/sites/companies.conf /etc/nginx/sites-available/
+COPY ./config/sites/admin.conf /etc/nginx/sites-available/
 
-ARG PHP_UPSTREAM=companies
+ARG PHP_UPSTREAM=admin
 
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/' /etc/apk/repositories
 
